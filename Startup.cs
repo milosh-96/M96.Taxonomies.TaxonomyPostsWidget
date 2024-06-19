@@ -35,12 +35,7 @@ namespace M96Dev.TaxonomyPosts
 
         public override void Configure(IApplicationBuilder builder, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
-            routes.MapAreaControllerRoute(
-                name: "Home",
-                areaName: "M96Dev.TaxonomyPosts",
-                pattern: "Home/Index",
-                defaults: new { controller = "Home", action = "Index" }
-            );
+           
         }
     }
 }

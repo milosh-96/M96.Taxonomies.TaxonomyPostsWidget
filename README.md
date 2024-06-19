@@ -16,6 +16,6 @@ There are three fields available:
 
 **Max Items**:  How many items you want to display.
 
-## Contributing
+## Contributions
 
 This is my first module for Orchard Core and I am aware there could be some bugs or general-issues regarding the implemenation. I would like to see how this module could be improved.

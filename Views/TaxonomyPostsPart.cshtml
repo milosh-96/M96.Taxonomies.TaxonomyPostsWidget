@@ -1,0 +1,43 @@
+@using OrchardCore.ContentManagement
+@{
+    int maxItems = Model.ContentItem.Content.TaxonomyPostsPart.MaxItems;
+    string taxonomyId = Model.ContentItem.Content.TaxonomyPostsPart.TaxonomyId;
+    string taxonomyItemId = Model.ContentItem.Content.TaxonomyPostsPart.TaxonomyItemId;
+    ContentItem taxonomyItem = await Orchard.GetTaxonomyTermAsync(taxonomyId, taxonomyItemId);
+    var items = await Orchard.QueryCategorizedContentItemsAsync(
+        x => x.Where(y => y.TermContentItemId == taxonomyItemId).Take(maxItems)
+    );
+}
+@if(taxonomyItem != null)
+{
+    <section>
+        <div class="section__section-heading">
+            <h3>@taxonomyItem.DisplayText</h3>
+        </div>
+        <ul>
+            @if (items == null || items.Count() == 0)
+            {
+                <li>@T["There are no items."]</li>
+            }
+            else
+            {
+                @foreach (var item in items)
+                {
+                    string titleRender = item.DisplayText;
+                    <li>
+                        <a display-for="item">@titleRender</a>
+                    </li>
+                }
+            }
+        </ul>
+        <div style="text-align: right;">
+            <a display-for="taxonomyItem">@T["View all"]</a>
+        </div>
+    </section>
+}
+else
+{
+    <section>
+        @T["Taxonomy Item does not exist."]
+    </section>
+}

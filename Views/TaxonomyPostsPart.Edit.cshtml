@@ -1,0 +1,16 @@
+﻿@model TaxonomyPostsPartViewModel
+
+<div class="mb-3">
+    <div class="form-group">
+        <label asp-for="TaxonomyId">@T["Taxonomy ID"]</label>
+        <input asp-for="TaxonomyId" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+        <label asp-for="TaxonomyItemId">@T["Taxonomy Item ID"]</label>
+        <input asp-for="TaxonomyItemId" class="form-control" type="text" />
+    </div> 
+    <div class="form-group">
+        <label asp-for="MaxItems">@T["Number of content items to display"]</label>
+        <input asp-for="MaxItems" class="form-control" type="number" />
+    </div>
+</div>

@@ -16,6 +16,10 @@ There are three fields available:
 
 **Max Items**:  How many items you want to display.
 
+## To implement
+I'm aware that current way of manually pasting IDs isn't good UX, so I'm working
+on fixing that.
+
 ## Contributions
 
-This is my first module for Orchard Core and I am aware there could be some bugs or general-issues regarding the implementation. I would like to see how this module could be improved.
+If you have any suggestions how the module/widget could be improved, let me know.

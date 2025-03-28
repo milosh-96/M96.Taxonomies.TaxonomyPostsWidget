@@ -5,10 +5,29 @@
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<PackageId>M96.Taxonomies.TaxonomyPostsWidget</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>Miloš Jovanović - M96</Authors>
+	<Product>Taxonomy Posts Widget for Orchard Core</Product>
+	<Description>An Orchard Core module that provides a widget that will display the latest posts (content items) from taxonomy items. For example, you can use this widget to display posts from 'travel' tag.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	  <RepositoryUrl>https://github.com/milosh-96/M96.Taxonomies.TaxonomyPostsWidget</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt">
+      <PackagePath>\</PackagePath>
+      <Pack>true</Pack>
+    </None>
+	  <None Include="README.md">
+      <PackagePath>\</PackagePath>
+      <Pack>true</Pack>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

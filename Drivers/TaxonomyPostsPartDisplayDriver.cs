@@ -1,14 +1,12 @@
-using M96Dev.TaxonomyPosts.Models;
-using M96Dev.TaxonomyPosts.Settings;
-using M96Dev.TaxonomyPosts.ViewModels;
+using M96.Taxonomies.TaxonomyPostsWidget.Models;
+using M96.Taxonomies.TaxonomyPostsWidget.ViewModels;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.ContentManagement.Display.Models;
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.DisplayManagement.ModelBinding;
 using OrchardCore.DisplayManagement.Views;
-using System.Threading.Tasks;
 
-namespace M96Dev.TaxonomyPosts.Drivers
+namespace M96.Taxonomies.TaxonomyPostsWidget.Drivers
 {
     public class TaxonomyPostsPartDisplayDriver : ContentPartDisplayDriver<TaxonomyPostsPart>
     {
@@ -48,14 +46,11 @@ namespace M96Dev.TaxonomyPosts.Drivers
 
         private static void BuildViewModel(TaxonomyPostsPartViewModel model, TaxonomyPostsPart part, BuildPartDisplayContext context)
         {
-            var settings = context.TypePartDefinition.GetSettings<TaxonomyPostsPartSettings>();
-
             model.ContentItem = part.ContentItem;
             model.TaxonomyId = part.TaxonomyId;
             model.TaxonomyItemId = part.TaxonomyItemId;
             model.MaxItems = part.MaxItems;
             model.TaxonomyPostsPart = part;
-            model.Settings = settings;
         }
     }
 }

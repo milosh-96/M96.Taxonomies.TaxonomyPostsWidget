@@ -1,6 +1,6 @@
 ﻿using OrchardCore.ContentManagement;
 
-namespace M96Dev.TaxonomyPosts.Models
+namespace M96.Taxonomies.TaxonomyPostsWidget.Models
 {
     public class TaxonomyPostsPart : ContentPart
     {

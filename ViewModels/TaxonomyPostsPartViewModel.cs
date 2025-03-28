@@ -1,9 +1,8 @@
-﻿using M96Dev.TaxonomyPosts.Models;
-using M96Dev.TaxonomyPosts.Settings;
+﻿using M96.Taxonomies.TaxonomyPostsWidget.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OrchardCore.ContentManagement;
 
-namespace M96Dev.TaxonomyPosts.ViewModels
+namespace M96.Taxonomies.TaxonomyPostsWidget.ViewModels
 {
     public class TaxonomyPostsPartViewModel
     {
@@ -18,8 +17,5 @@ namespace M96Dev.TaxonomyPosts.ViewModels
 
         [BindNever]
         public TaxonomyPostsPart TaxonomyPostsPart { get; set; }
-
-        [BindNever]
-        public TaxonomyPostsPartSettings Settings { get; set; }
     }
 }

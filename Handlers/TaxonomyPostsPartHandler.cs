@@ -1,8 +1,7 @@
-﻿using M96Dev.TaxonomyPosts.Models;
+﻿using M96.Taxonomies.TaxonomyPostsWidget.Models;
 using OrchardCore.ContentManagement.Handlers;
-using System.Threading.Tasks;
 
-namespace M96Dev.TaxonomyPosts.Handlers
+namespace M96.Taxonomies.TaxonomyPostsWidget.Handlers
 {
     public class TaxonomyPostsPartHandler : ContentPartHandler<TaxonomyPostsPart>
     {
